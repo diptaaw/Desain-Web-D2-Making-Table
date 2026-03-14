@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; color: #333; }
+        .container { background: white; border: 1px solid #ccc; border-radius: 4px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        
+        /* Header Bagian */
+        .header-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .title { font-weight: bold; font-size: 16px; }
+        
+        /* Kontrol Tabel */
+        .table-controls { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 13px; }
+        input[type="text"] { border: 1px solid #ccc; padding: 4px; border-radius: 3px; }
+
+        /* Styling Utama Tabel sesuai materi */
+        table { width: 100%; border-collapse: collapse; border: 1px solid #ddd; }
+        th { background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; text-align: left; font-size: 13px; }
+        td { padding: 8px; border: 1px solid #ddd; font-size: 13px; vertical-align: middle; }
+
+        /* Status Labels */
+        .status { padding: 2px 8px; border-radius: 4px; color: white; font-weight: bold; font-size: 11px; text-transform: capitalize; }
+        .banned { background-color: #d9534f; } /* Merah [cite: 185] */
+        .pending { background-color: #f0ad4e; } /* Kuning/Oranye [cite: 193] */
+        .active { background-color: #5cb85c; }  /* Hijau [cite: 236] */
+
+        /* Button Actions */
+        .btn { padding: 4px 8px; border: none; border-radius: 3px; color: white; cursor: pointer; font-size: 11px; margin-right: 2px; text-decoration: none; display: inline-flex; align-items: center; }
+        .view { background-color: #5cb85c; }   /* [cite: 186] */
+        .edit { background-color: #5bc0de; }   /* [cite: 195] */
+        .delete { background-color: #d9534f; } /* [cite: 188] */
+        
+        /* Footer Tabel */
+        .table-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; font-size: 13px; }
+        .pagination button { padding: 5px 10px; border: 1px solid #ddd; background: white; cursor: pointer; }
+        .pagination button.active-page { background-color: #f4f4f4; border-color: #ccc; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-top">
+        <div class="title">👤 Members</div>
+        <div style="color: #999;">⚙️ 🔼 ✖️</div>
+    </div>
+
+    <div class="table-controls">
+        <div>10 records per page</div> <div>Search: <input type="text"></div> </div>
+
+    <table cellpadding="0" cellspacing="0"> <thead>
+            <tr>
+                <th>Username</th> <th>Date registered</th> <th>Role</th> <th>Status</th> <th>Actions</th> </tr>
+        </thead>
+        <tbody>
+            <tr><td>Abdullah</td><td>2012/02/01</td><td>Staff</td><td><span class="status banned">Banned</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Abraham</td><td>2012/03/01</td><td>Member</td><td><span class="status pending">Pending</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Ahemd Saruar</td><td>2012/03/01</td><td>Member</td><td><span class="status pending">Pending</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Amrin Sana</td><td>2012/08/23</td><td>Staff</td><td><span class="status banned">Banned</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Andro Christopher</td><td>2012/08/23</td><td>Staff</td><td><span class="status banned">Banned</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Brown Blue</td><td>2012/03/01</td><td>Member</td><td><span class="status pending">Pending</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Brown Robert</td><td>2012/03/01</td><td>Member</td><td><span class="status pending">Pending</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Chris Jack</td><td>2012/01/01</td><td>Member</td><td><span class="status active">Active</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Christopher</td><td>2012/08/23</td><td>Staff</td><td><span class="status banned">Banned</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+            <tr><td>Dave Robert</td><td>2012/03/01</td><td>Member</td><td><span class="status pending">Pending</span></td><td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn delete">Delete</button></td></tr>
+        </tbody>
+    </table>
+
+    <div class="table-footer">
+        <div>Showing 1 to 10 of 32 entries</div> <div class="pagination">
+            <button>← Previous</button> <button class="active-page">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>Next →</button> </div>
+    </div>
+</div>
+
+</body>
+</html>
